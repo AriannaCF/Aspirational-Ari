@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/stylesheet.css" />
+    <link rel="icon" href="../IMG/aanewfavicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Julius+Sans+One&family=Quicksand:wght@300;400;500;600;700&family=Tenor+Sans&family=Wire+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Ari</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html"><h1>Aspirational Ari</h1></a>
+      <nav class="primary-navigation">
+        <ul>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="lifestyle.html">Lifestyle</a></li>
+          <li><a href="beauty.html">Beauty</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" id="current">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="contact-header">Want to Get in Touch With Ari?</h2>
+      <p class="contact-info">Fill out the form below</p>
+      <form action="get" class="contact-info-form">
+        <fieldset>
+          <label for="first-name">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              required
+          /></label>
+          <label for="last-name">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              required
+          /></label>
+        </fieldset>
+        <fieldset>
+          <label for="email-ari">
+            <input
+              type="email"
+              name="email"
+              id="email-ari"
+              placeholder="Email Address"
+              required
+          /></label>
+          <label for="phone">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+          /></label>
+        </fieldset>
+        <fieldset class="text-area">
+          <label for="sendme">
+            <textarea
+              name="sendme"
+              id="sendme"
+              placeholder="Send Ari a Message..."
+              cols="20"
+              rows="10"
+            ></textarea>
+          </label>
+        </fieldset>
+        <fieldset>
+          <button class="contact-button">Reach Out</button>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <section class="main-footer">
+        <p>Aspirational Ari</p>
+        <ul>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="beauty.html">Beauty</a></li>
+          <li><a href="lifestyle.html">Lifestyle</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </section>
+      <fieldset class="subscribe-to-aa">
+        <form action="submit">
+          <label for="email">Subscribe to the newsletter:</label><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+          />
+          <button class="subscribe-button">Subscribe</button>
+        </form>
+      </fieldset>
+      <div class="sub-footer">
+        <p>&copy;2022 Ari Aspirational</p>
+        <section class="socials">
+          <img src="../IMG/icons8-facebook-30.png" alt="Facebook Icon" />
+          <img src="../IMG/icons8-instagram-30.png" alt="Instagram Icon" />
+          <img src="../IMG/icons8-twitter-30.png" alt="Twitter Icon" />
+          <img src="../IMG/icons8-youtube-30.png" alt="Youtube Icon" />
+          <img src="../IMG/icons8-linkedin-30.png" alt="Linkedin Icon" />
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

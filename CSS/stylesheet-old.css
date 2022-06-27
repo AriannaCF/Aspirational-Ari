@@ -1,0 +1,880 @@
+/* This is an older version of the site that I abandoned when I decided that it's actually boring af */
+
+/* -------------------GENERAL------------------- */
+html {
+  background-color: #ecdfed;
+  color: #231942;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+ul li {
+  list-style-type: none;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #231942;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #5e548e;
+  padding: 10px 0;
+  margin: 0;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: larger;
+  font-weight: 300;
+  color: white;
+}
+nav ul li {
+  flex-basis: 200px;
+  flex-shrink: 1;
+  text-align: center;
+}
+nav ul li a {
+  transition: color 0.2s ease;
+}
+nav ul li a:hover {
+  color: #e0b1cb;
+}
+#current {
+  color: #e0b1cb;
+  font-weight: bold;
+}
+abbr {
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+    font-size: medium;
+  }
+  nav ul li {
+    min-width: 320px;
+    flex-grow: 1;
+  }
+}
+
+footer {
+  background-color: #231942;
+  color: #5e548e;
+  font-family: "Tenor Sans", sans-serif;
+}
+footer section {
+  text-align: unset;
+  padding: 0 20px;
+  margin: 20px 0;
+  padding: 0 40px;
+}
+
+.sub-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4f4768;
+  color: white;
+}
+.sub-footer p {
+  font-size: 14px;
+  padding: 0 5px;
+}
+.socials {
+  margin: 0;
+  padding: 10px 20px;
+}
+footer li {
+  padding: 2px 0;
+}
+footer ul {
+  padding: 5px;
+}
+footer p {
+  font-size: 20px;
+}
+footer input {
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  footer #email {
+    margin-bottom: 0;
+  }
+}
+.category-button {
+  font-family: "Alegreya Sans", sans-serif;
+  font-variant: small-caps;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: #be95c4;
+  color: white;
+  border: 1px solid #231942;
+  width: 80px;
+  margin: 10px auto;
+  padding: 0;
+  border-radius: 0.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.category-button:hover {
+  transform: translate(0, -2px);
+  box-shadow: 0 2px 2px #5f5073;
+}
+
+/* -------------HEADINGS AND TITLES------------- */
+header h1 {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 7vw;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 25px 0 50px;
+}
+/* @media (max-width: 425) {
+  header h1 {
+    font-size: 24px;
+  }
+} */
+h2 {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  border-top: 1px solid #231942;
+  padding: 15px 0;
+  margin: 25px 40px 0;
+}
+.subheader {
+  font-family: "Tenor Sans", sans-serif;
+  display: inline-block;
+  width: fit-content;
+  height: 135px;
+  font-size: 35px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  vertical-align: middle;
+  background-color: white;
+  border: 4px double #231942;
+  padding: 25px 5vw;
+  margin: 222px auto 20px;
+}
+.blog-post-title {
+  font-family: inherit;
+  font-size: 28.5px;
+  margin: 0;
+  font-weight: bold;
+}
+.post-card-title {
+  font-family: "Wire One", sans-serif;
+  letter-spacing: 0.15rem;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 20px;
+  color: #231942;
+  transition: color 0.2s ease;
+}
+.post-card-title:hover {
+  color: #bdbac6;
+}
+@media (max-width: 385px) {
+  .subheader {
+    font-size: 25px;
+  }
+}
+@media (max-width: 420px) {
+  h1 {
+    font-size: 35px;
+    padding: 10.5px 0 21px 0;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 50px;
+    padding: 15px 0 30px;
+  }
+}
+@media (max-width: 920px) {
+  h1 {
+    font-size: 60px;
+    padding: 20px 0 40px;
+  }
+}
+
+/* -------------------HERO IMAGE------------------- */
+.hero-image-container {
+  width: 100%;
+  height: 300px;
+  background-image: url(../IMG/hero-image.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.cards img {
+  width: 200px;
+}
+
+/* -------------------FEATURED POST------------------- */
+.featured-post {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 10px 10px 10px #a59ca6;
+  margin: 0 40px;
+}
+.featured-post img {
+  width: 55%;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 3;
+}
+.featured-post-card {
+  width: 45%;
+  height: 500px;
+  background-color: #9f86c0;
+  flex-shrink: 1;
+}
+.featured-post-card-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 75px 25px 50px;
+}
+.featured-post-card-description {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 50px;
+}
+.read-more-button {
+  border: 1px solid #231942;
+  border-radius: 0.1rem;
+  color: #231942;
+  background-color: #ffffff50;
+  padding: 0.25rem 0.1rem;
+  display: block;
+  margin: 40px auto;
+  width: 100px;
+  text-align: center;
+  font-family: "Alegreya Sans", sans-serif;
+  font-variant: small-caps;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.read-more-button:hover {
+  transform: translate(0, -2px);
+  box-shadow: 0 2px 4px #5f5073;
+}
+
+@media (max-width: 900px) {
+  .featured-post {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featured-post img {
+    width: 100%;
+  }
+  .featured-post-card {
+    width: 100%;
+    height: 430px;
+  }
+  .featured-post-description {
+    font-size: 20px;
+  }
+  .featured-post-title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .featured-post-title {
+    font-size: 20px;
+    margin: 50px 25px;
+  }
+  .featured-post-description {
+    font-size: 16px;
+  }
+  .featured-post img {
+    object-position: 25% 100%;
+  }
+  .featured-post-card {
+    height: 400px;
+  }
+  .featured-post {
+    margin: 0;
+  }
+}
+@media (max-width: 425px) {
+  .featured-post-title {
+    font-size: 20px;
+    margin: 20px 15px;
+  }
+  .featured-post-description {
+    font-size: 16px;
+  }
+  #featured-read-more-button {
+    margin: 20px auto;
+  }
+}
+
+/* -------------------INDEX CARDS------------------- */
+.more-posts-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 100px 0;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 400px;
+  background-color: white;
+  box-shadow: 2px 2px 4px grey;
+}
+.post-card-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .more-posts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .post-card {
+    width: 90%;
+    margin: 20px 0;
+  }
+}
+
+/* -------------------BLOG POSTS------------------- */
+.blog-post-content {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  margin: 40px;
+}
+.date {
+  color: #918ca1;
+}
+.article-header-image {
+  width: 95%;
+}
+#brushes {
+  height: 400px;
+  object-fit: cover;
+  object-position: bottom;
+}
+.inner-image {
+  height: 500px;
+  float: right;
+  margin: 0 50px 20px;
+  border: 1px solid #231942;
+}
+iframe {
+  display: block;
+  margin: 50px auto;
+  border: 1px solid #231942;
+}
+
+@media (max-width: 600px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 425px) {
+  .blog-post-content {
+    padding: 20px;
+    margin: 0;
+    font-size: 16px;
+  }
+  .inner-image {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+/* -------------------TRENDING SECTION------------------- */
+.trending-card {
+  background-color: #9f86c0;
+  height: 255px;
+  min-width: 150px;
+  padding: 50px 10px;
+  margin: 5px;
+  border: 1px solid #231942;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.trending-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+.trending-card:hover {
+  box-shadow: 0 4px 4px #a59ca6;
+  transform: translate(0, -4px);
+}
+.trending-header {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 25 px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 1px solid #231942;
+  padding: 15px 0;
+  margin: 25px 40px 10px;
+}
+.trending-post-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0 35px;
+}
+.trending-post-title a {
+  transition: color 0.2s ease;
+}
+.trending-post-title a:hover {
+  color: #e3b9d0;
+}
+
+@media (max-width: 992px) {
+  .trending-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px 20px;
+    margin: 0;
+  }
+  .trending-card {
+    width: 30%;
+  }
+}
+@media (max-width: 992px) and (min-width: 700px) {
+  .trending-header {
+    display: none;
+  }
+  .trending-container {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .trending-container {
+    flex-direction: column;
+    width: unset;
+    align-items: center;
+  }
+  .trending-card {
+    width: 90%;
+    height: 150px;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .trending-card {
+    height: 180px;
+  }
+}
+
+/* -------------------RELATED POSTS------------------- */
+
+.related-posts-container {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.related-post-card {
+  display: flex;
+  min-width: 400px;
+  width: 45vw;
+  height: 200px;
+  margin: 20px;
+  box-shadow: 4px 4px 4px grey;
+  background-color: white;
+}
+.related-post-card img {
+  min-width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
+.related-post-title {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.5vw;
+  padding: 0;
+  margin: 0 20px 20px 20px;
+  transition: color 0.2s ease;
+}
+.related-post-title:hover {
+  color: #be95c4;
+  cursor: pointer;
+  /* pointer cursor is to make the fake posts feel like links */
+}
+.related-post-description {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 300;
+  padding: 0;
+  margin: 0 20px;
+}
+.related-post-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .related-posts-container {
+    flex-direction: row;
+  }
+  .related-post-card {
+    flex-basis: 95vw;
+  }
+  .related-post-title {
+    font-size: 22px;
+  }
+  .related-post-description {
+    font-size: 18px;
+  }
+  .related-post-card img {
+    min-width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .related-post-card img {
+    min-width: 250px;
+  }
+  .related-post-title {
+    font-size: 18px;
+  }
+  .related-post-description {
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .related-post-card {
+    height: 150px;
+    min-width: 95vw;
+    padding: 5px;
+  }
+  .related-post-card img {
+    display: none;
+  }
+  .related-post-title,
+  .related-post-description {
+    padding: 5px 20px;
+    margin: 10px;
+  }
+}
+
+/* -------------------EVEN MORE POSTS------------------- */
+.other-posts-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.other-posts-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 10px 20px;
+}
+.other-posts-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.other-posts-title {
+  font-family: "Wire One", sans-serif;
+  letter-spacing: 0.15rem;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 0;
+  color: #231942;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+.other-posts-title:hover {
+  color: #be95c4;
+  cursor: pointer;
+}
+
+/* -------------------CONTACT ME PAGE------------------- */
+.contact-info-form {
+  margin: 0 0 200px 0;
+}
+input {
+  min-width: 200px;
+  min-height: 40px;
+  display: inline-block;
+  margin: 10px auto;
+  color: #9f86c0;
+}
+textarea {
+  width: 414px;
+  font-family: "Julius Sans One", sans-serif;
+  background-color: #f6eff6;
+  border: 1px solid #9f86c0;
+  padding: 5px;
+  color: #9f86c0;
+}
+fieldset {
+  text-align: center;
+  border: none;
+}
+input {
+  margin: 5px;
+  font-family: "Julius Sans One", sans-serif;
+  background-color: #f6eff6;
+  border: 1px solid #9f86c0;
+  padding: 0 5px;
+}
+input:hover,
+textarea:hover {
+  box-shadow: 0 0 2px grey;
+}
+.contact-info {
+  font-family: "Alegreya Sans", sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+.contact-header {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 23 px;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 0;
+  margin: 25px 40px 10px;
+}
+.contact-button {
+  border: 1px solid #231942;
+  border-radius: 0.1rem;
+  color: #231942;
+  font-size: 15px;
+  background-color: #ffffff50;
+  padding: 0.25rem 0.1rem;
+  width: 200px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-variant: small-caps;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-button:hover {
+  transform: translate(0, -2px);
+  box-shadow: 0 2px 4px #5f5073;
+}
+
+@media (max-width: 451px) {
+  textarea {
+    max-width: 200px;
+  }
+}
+
+/* -------------------ABOUT------------------- */
+.about-section {
+  display: flex;
+  background-image: linear-gradient(
+    #a673dc,
+    #cb7ec2,
+    #e696bb,
+    #f2abb1,
+    #f6b86f,
+    #f2abb1,
+    #e696bb,
+    #cb7ec2,
+    #a673dc
+  );
+  justify-content: center;
+  width: 100vw;
+}
+.about-section img {
+  object-fit: contain;
+  width: 45%;
+}
+.about-ari {
+  width: 30%;
+  height: auto;
+  flex-basis: 2;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #9f86c09a;
+}
+.about-ari h2 {
+  margin: 50px auto 25px;
+}
+.about-section img,
+.about-ari {
+  margin: 20px 0;
+}
+.about-ari h2 {
+  text-align: center;
+}
+.subscribe-button {
+  border: 1px solid #9f86c0;
+  border-radius: 0.1rem;
+  color: #231942;
+  font-size: 15px;
+  background-color: #ffffff50;
+  padding: 0.25rem 0.1rem;
+  width: 150px;
+  height: 40px;
+  margin-left: -7px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-variant: small-caps;
+  transition: box-shadow 0.2s ease;
+}
+.subscribe-button:hover {
+  box-shadow: 0 2px 4px #5f5073;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-section img,
+  .about-ari {
+    margin: 0;
+    width: 65%;
+  }
+  .subscribe-button {
+    margin-left: 0;
+    width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .about-section img,
+  .about-ari {
+    margin: 0;
+    width: 90vw;
+  }
+  .about-ari h2 {
+    margin: 25px auto;
+  }
+  .about-ari {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* -------------------CONTENT GRID TEMPLATES------------------- */
+
+.career-page,
+.beauty-page,
+.lifestyle-page {
+  display: grid;
+  grid-template-columns: 40vw 40vw 20vw;
+  grid-template-rows: 300px auto auto auto auto;
+  grid-template-areas:
+    "post post trend"
+    "post post trend"
+    "more more more"
+    "other other other"
+    "footer footer footer";
+}
+.blog-post {
+  grid-area: post;
+}
+.related-posts {
+  grid-area: more;
+}
+.other-posts {
+  grid-area: other;
+}
+.trending {
+  grid-area: trend;
+}
+footer {
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  grid-template-rows: auto 50px;
+  grid-template-areas:
+    "map sub"
+    "det det";
+}
+footer {
+  grid-area: footer;
+}
+footer section {
+  grid-area: map;
+}
+footer fieldset {
+  grid-area: sub;
+}
+.sub-footer {
+  grid-area: det;
+}
+
+@media (max-width: 400px) {
+  footer {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "map"
+      "sub"
+      "det";
+    text-align: center;
+  }
+  .sub-footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 420px) {
+  .postcards {
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat (6, 480px);
+    grid-template-areas:
+      "code"
+      "travel"
+      "life"
+      "health"
+      "style"
+      "beauty";
+  }
+}
+@media (max-width: 600px) {
+  .postcards {
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat(3, 480px);
+    grid-template-areas:
+      "code travel"
+      "life health"
+      "style beauty";
+  }
+}
+
+@media (max-width: 920px) {
+  .postcards {
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat(3, 480px);
+    grid-template-areas:
+      "code travel"
+      "life health"
+      "style beauty";
+  }
+}
+
+@media (max-width: 992px) {
+  .career-page,
+  .beauty-page,
+  .lifestyle-page {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas:
+      "post post"
+      "more more"
+      "trend trend"
+      "other other"
+      "footer footer";
+  }
+}
