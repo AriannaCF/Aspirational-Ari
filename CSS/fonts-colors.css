@@ -2,10 +2,18 @@
 /* font-family: 'Alegreya Sans', sans-serif;
 font-family: 'Unica One', cursive;
 font-family: 'Yanone Kaffeesatz', sans-serif; */
-
+:root {
+  --deep-dark-purple: #22002c;
+  --purple-bar-gradient: linear-gradient(#14001a, #22002c, #14001a);
+  --amethyst-smoke-text: #a799b1;
+  --light-purple-text: #f6e9fe;
+  --chatelle: #c5bacb;
+  --picton-blue: #4cc9f0;
+  
+}
 html {
-    background-color: #34004f;
-    color: #f6e9fe;
+    background-color: #110016;
+    color: var(--light-purple-text);
     font-family: "Alegreya Sans", sans-serif;
   }
   a {
@@ -25,15 +33,14 @@ html {
   }
   header {
     /* background-color: #52007a; */
-    background-color: #22002c;
+    background-color: var(--deep-dark-purple);
   }
   header h1 {
     text-shadow: 0 0 10px white;
     font-family: "Unica One", cursive;
   }
   .primary-navigation ul {
-    /* background: linear-gradient(#400060, #52007a, #400060); */
-    background: linear-gradient(#14001a, #22002c, #14001a);
+    background: var(--purple-bar-gradient) ;
   }
   .primary-navigation ul li a {
     font-family: "Julius Sans One", sans-serif;
@@ -41,23 +48,24 @@ html {
     font-variant: small-caps;
     font-weight: 400;
     letter-spacing: 0.1rem;
-    color: #daa9fb;
+    color: var(--amethyst-smoke-text);
+    transition: all 0.25s ease-out;
   }
   #current {
     color: white;
-    text-shadow: 0 0 5px #f6e9fe;
+    text-shadow: 0 0 5px var(--light-purple-text);
     font-weight: bold;
   }
   hr {
-    background-color: #f6e9fe;
+    background-color: var(--light-purple-text);
   }
   h2 {
     font-family: "Unica One", cursive;
-    border-top: 1px solid #f6e9fe;
+    border-top: 1px solid var(--light-purple-text);
   }
   .footer {
-    background-color: #22002c;
-    color: #a799b1;
+    background-color: var(--deep-dark-purple);
+    color: var(--amethyst-smoke-text);
   }
   .footer p {
     font-family: "Unica One", cursive;
@@ -66,11 +74,11 @@ html {
     font-family: "Julius Sans One", sans-serif;
   }
   .sub-footer {
-    background: linear-gradient(#14001a, #22002c, #14001a);
+    background: var(--purple-bar-gradient);
   }
   input,
   textarea {
-    background-color: #f6e9fe;
+    background-color: var(--light-purple-text);
     font-family: "Julius Sans One", sans-serif;
     border: none;
   }
@@ -85,11 +93,11 @@ html {
   .hero-image-container {
     background-image: url(../IMG/city-landscape-night.jpg);
     background-position: 50% 55%;
-    border: 1px solid #4cc9f0;
+    border: 1px solid var(--picton-blue);
   }
   .subheader {
     background-color: #360060;
-    border: 5px double #4cc9f0;
+    border: 5px double var(--picton-blue);
     text-shadow: 0 0 5px white;
     box-shadow: 0 0 10px 8px #4ccaf05b;
     font-family: "Alegreya Sans", sans-serif;
@@ -121,7 +129,7 @@ html {
   }
   .post-card,
   .related-post-card {
-    background-color: #c5bacb;
+    background-color: var(--chatelle);
   }
   .post-card-title,
   .related-post-title,
@@ -133,11 +141,11 @@ html {
   }
   .trending-card {
     background-color: #7f6b9a;
-    color: #f6e9fe;
+    color: var(--light-purple-text);
   }
   .other-posts-title {
     font-family: "Julius Sans One", sans-serif;
-    color: #f6e9fe;
+    color: var(--light-purple-text);
   }
   .blog-post-title {
     font-family: inherit;
@@ -146,7 +154,7 @@ html {
     font-weight: 300;
   }
   .blog-post-content p a {
-    color: #4cc9f0;
+    color: var(--picton-blue);
   }
   .read-more-button {
     font-family: "Julius Sans One", sans-serif;
@@ -159,9 +167,9 @@ html {
   }
   .category-button {
     font-family: "Julius Sans One", sans-serif;
-    border: 0.5px solid #f6e9fe;
+    border: 0.5px solid var(--light-purple-text);
     box-shadow: 0 0 4px 2px #00000050;
-    color: #f6e9fe;
+    color: var(--light-purple-text);
   }
   .date {
     color: #918ca1;
@@ -236,11 +244,11 @@ html {
   }
   .primary-navigation ul li a:hover {
     color: white;
-    text-shadow: 0 0 5px #f6e9fe;
+    text-shadow: 0 0 5px var(--light-purple-text);
   }
   .featured-post:hover {
     box-shadow: 0 0 10px 4px #ffffff75;
-    border: 0.5px solid #4cc9f0;
+    border: 0.5px solid var(--picton-blue);
   }
   .post-card:hover,
   .related-post-card:hover {
@@ -273,7 +281,7 @@ html {
   }
   .subscribe-button:hover,
   .contact-button:hover {
-    background-color: #f6e9fe;
+    background-color: var(--light-purple-text);
     border: 0.5px solid white;
   }
   .category-button:hover {
@@ -281,7 +289,7 @@ html {
     box-shadow: 0 0 10px 1px #ffffff75;
   }
   .footer a:hover {
-    color: #f6e9fe;
+    color: var(--light-purple-text);
   }
   .blog-post-content p a:hover,
   .about-ari p a:hover {
